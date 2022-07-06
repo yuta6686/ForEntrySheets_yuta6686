@@ -9,9 +9,9 @@ graph TB
 	bld[Blender]
 	wpf[WPF]
 
-	all --> dx2
-	all --> hew2
 	all --> ngt
+	all --> hew2
+	all --> dx2	
 	all --> bld
 	all --> wpf
 
