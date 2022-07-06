@@ -1,0 +1,30 @@
+#pragma once
+#include "GameObject.h"
+class GO_Player;
+class GO_Scramble;
+
+class GO_ScrambleRotation :
+    public GameObject
+{
+public:
+    // GameObject ÇâÓÇµÇƒåpè≥Ç≥ÇÍÇ‹ÇµÇΩ
+    virtual void Initialize(void) override { /*ïœçXÇ»Çµ*/ };
+    virtual void Finalize(void) override { /*ïœçXÇ»Çµ*/ };
+    virtual void Update(void) override ;
+    virtual void Draw(void) override { /*ïœçXÇ»Çµ*/ };
+
+    virtual int GetGameScene(void) override { return m_GameScene; }
+
+    void SetPlayer(GO_Player* p_player) { mp_player = p_player; }
+    void SetVortex(GO_Scramble* p_vortex) { mp_vortex = p_vortex; }
+
+    
+    
+
+private:
+    GO_Player* mp_player;
+    GO_Scramble* mp_vortex;
+
+    const int m_GameScene = GAMESCENE_SCRAMBLE;
+};
+
