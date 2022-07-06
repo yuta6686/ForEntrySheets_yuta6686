@@ -46,4 +46,15 @@ graph TB
 ![screen_shoot_005](https://user-images.githubusercontent.com/68798323/177543176-6e9bc251-15e9-414e-a5e2-79c47d4579a5.jpg)
 ![screen_shoot_006](https://user-images.githubusercontent.com/68798323/177543188-81ad45c6-6fee-4251-be0b-4de9c1119daa.jpg)
 
+## 2年DirectX 学内コンテスト：スクリーンショット
+![スクリーンショット_001](https://user-images.githubusercontent.com/68798323/177544072-c918fffc-e10d-43c9-8d7c-5d0794bc9d41.jpg)
+![スクリーンショット_002](https://user-images.githubusercontent.com/68798323/177544083-75d09366-f302-44c3-bd8d-6eabf7538a8a.jpg)
+![スクリーンショット_003](https://user-images.githubusercontent.com/68798323/177544096-8e9e3ed0-3c63-455b-a4a5-05889e73023c.jpg)
+![スクリーンショット_004](https://user-images.githubusercontent.com/68798323/177544106-9d64a4cc-1334-4e27-ac8a-1f40cc9322fd.jpg)
+![スクリーンショット_005](https://user-images.githubusercontent.com/68798323/177544113-8797f348-1f74-4750-8490-267445293a46.jpg)
+
+
+![image](https://user-images.githubusercontent.com/68798323/177544009-edefedbf-79ee-43d2-ad59-cdc3c7d6d496.png)
+![image](https://user-images.githubusercontent.com/68798323/177544030-4d7c4d65-4b8c-44cd-af4a-876ad5691e73.png)
+![image](https://user-images.githubusercontent.com/68798323/177544062-9759c21f-545b-4970-ab0c-8c8302619f79.png)
 
