@@ -21,5 +21,8 @@ graph TB
 	ngt --> ngt_sum1[Unity 2Dゲーム] --> 
 	ntg_sum1[チーム制作<br>]-->ntg_sum2.5[<b>担当箇所</b>]-->
 	ngt_sum2[タイトル<br>リザルト<br>シーン選択<br>エリア選択<br>フェード<br>シェーダ<br>アニメーション<br>など]
+	bld-->bld_sum1[独学]-->bld_sum2[制作物]-->
+	bld_sum3[剣 </br>エフェクト </br>geometry node </br>shader node]
+	wpf-->wpf_sum1[専科]-->wpf_sum2[制作物]-->wpf_sum3[アイコンエディタ]
 	
 ```
