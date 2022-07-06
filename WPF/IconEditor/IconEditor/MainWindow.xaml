@@ -1,0 +1,281 @@
+﻿<Window x:Class="IconEditor.MainWindow"       
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IconEditor"
+        mc:Ignorable="d"
+        Title="☆スター・バースト・アイコン・エディタ☆" 
+        Icon="Images/icon.png"        
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True">
+
+    <!--<ui:SimpleStackPanel Margin="12" Spacing="24">
+        <TextBlock Text="My first ModernWPF app" Style="{StaticResource HeaderTextBlockStyle}" />
+        <Button Content="I am a button" />
+        <Button Content="I am an accent button" Style="{StaticResource AccentButtonStyle}" />
+    </ui:SimpleStackPanel>-->
+
+    <Window.CommandBindings>
+        
+        <CommandBinding Command="{x:Static local:MainWindow.UndoCommand}"
+                        Executed="MenuItem_Undo_Click" CanExecute="MenuItem_Undo_Click_Can"/>
+        
+        <CommandBinding Command="{x:Static local:MainWindow.RedoCommand}"
+                        Executed="MenuItem_Redo_Click" CanExecute="MenuItem_Redo_Click_Can"/>
+
+        <CommandBinding Command="{x:Static local:MainWindow.SaveAsCommand}"
+                        Executed="MenuItem_SaveAs_Click"/>
+
+        <CommandBinding Command="{x:Static local:MainWindow.CopyCommand}"
+                        Executed="MenuItem_Copy_Click" />
+
+        <CommandBinding Command="{x:Static local:MainWindow.PasteCommand}"
+                        Executed="MenuItem_Paste_Click"/>
+
+    </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+Z"        Command="{x:Static local:MainWindow.UndoCommand}"/>
+        <KeyBinding Gesture="Ctrl+Y"        Command="{x:Static local:MainWindow.RedoCommand}"/>
+        <KeyBinding Gesture="Shift+Ctrl+Z"  Command="{x:Static local:MainWindow.RedoCommand}"/>
+        <KeyBinding Gesture="Shift+Ctrl+S"  Command="{x:Static local:MainWindow.SaveAsCommand}"/>
+        <KeyBinding Gesture="Ctrl+C"        Command="{x:Static local:MainWindow.CopyCommand}"/>
+        <KeyBinding Gesture="Ctrl+V"        Command="{x:Static local:MainWindow.PasteCommand}"/>
+    </Window.InputBindings>
+    
+    <Window.Resources>
+        <SolidColorBrush x:Key="BlueFill" Color="Blue"/>
+    </Window.Resources>
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="37.6"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--メニュー-->
+        <Menu Grid.Row="0" Height="Auto" Margin="0,0,-0.4,0">
+            <MenuItem Header=" ファイル(_F)">
+                <MenuItem x:Name="MenuItem_New" Header="新規(_N)" 
+                          InputGestureText="[Ctrl] N " Click="MenuItem_New_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/NewFile_16x.png"/>
+                    </MenuItem.Icon>
+                    <MenuItem x:Name="MenuItem_NewIn_Empty" Header="Empty" Click="MenuItem_NewIn_Empty_Click" ></MenuItem>
+                    <MenuItem x:Name="MenuItem_NewIn" Header="General" ></MenuItem>
+                    <MenuItem x:Name="MenuItem_NewIn1" Header="2D Animation"></MenuItem>
+                    <MenuItem x:Name="MenuItem_NewIn2" Header="Sculpting"></MenuItem>
+                    <MenuItem x:Name="MenuItem_NewIn3" Header="VFX"></MenuItem>
+                    <MenuItem x:Name="MenuItem_NewIn4" Header="Video Editing"></MenuItem>
+                </MenuItem>
+
+                <MenuItem x:Name="MenuItem_Open" Header="開く(_O)..." 
+                          InputGestureText="[Ctrl] O " Click="MenuItem_Open_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/FolderOpened_grey_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_OpenRecent" Header="最近使用したファイル..." 
+                          InputGestureText="[Shit][Ctrl] S ">
+
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_Save" Header="保存(_S)" InputGestureText="[Ctrl] S ">
+
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_SaveAs" Header="名前をつけて保存(_A)..." 
+                          InputGestureText="[Ctrl Shift] S  " Click="MenuItem_SaveAs_Click">
+
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Append" Header="アペンド...">
+
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Import" Header="インポート...">
+
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_Export" Header="エクスポート...">
+
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Finalize" Header="終了(_Q)" 
+                          InputGestureText="[Ctrl] Q" Click="MenuItem_Finalize_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Exit_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Edit" Header="編集(_E)">
+                <MenuItem x:Name="MenuItem_Undo" Header="元に戻す" InputGestureText="[Ctrl] Z" 
+                          Command="{x:Static local:MainWindow.UndoCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Undo_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_Redo" Header="やり直す" InputGestureText="[Ctrl] Y" 
+                          Command="{x:Static local:MainWindow.RedoCommand}">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Redo_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_ZoomIn" Header="拡大" Click="MenuItem_ZoomIn_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/ZoomIn_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItem_ZoomOut" Header="縮小" Click="MenuItem_ZoomOut_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/ZoomOut_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Copy" Header="コピー" Click="MenuItem_Copy_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Copy_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                
+                <MenuItem x:Name="MenuItem_Paste" Header="貼り付け" Click="MenuItem_Paste_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Paste_16x.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="MenuItem_Help" Header="ヘルプ(_H)" InputGestureText="[Ctrl] H">
+                <MenuItem x:Name="MenuItem_Version" Header="バージョン情報(_A)" Click="MenuItem_Version_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!--スタックパネル-->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,-0.4,0.6" Background="Black">
+            <Button x:Name="Button_NewFile" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Images/NewFile_16x.png"/>
+            </Button>
+            <Button x:Name="Button_Open" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Images/FolderOpened_Grey_16x.png"/>
+                
+            </Button>
+
+            <Button x:Name="Button_Undo" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}" 
+                    Click="Button_Undo_Click" KeyDown="Button_Undo_KeyDown">
+                <Image Source="Images/Undo_16x.png"/>
+                
+            </Button>
+            <Button x:Name="Button_Redo" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Redo_Click">
+                <Image Source="Images/Redo_16x.png"/>
+                
+            </Button>
+            <Button x:Name="Button_Zoom" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Images/NewFile_16x.png"/>
+            </Button>
+            <Button x:Name="Button_zzz" Padding="10" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="Images/NewFile_16x.png"/>
+            </Button>
+
+            <Label Name="ZoomLavel" Content="100%" Width="40" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="MenuItem_ZoomOut_Click">
+                <Image Source="Images/ZoomOut_16x.png"/>
+            </Button>
+
+            <Slider x:Name="Slider_Zoom" VerticalAlignment="Center" Width="160" 
+                    IsSnapToTickEnabled="True"
+                    Minimum="25"
+                    Maximum="400"
+                    Ticks="25,50,75,100,125,150,200,300,400"
+                    Value="100" VerticalContentAlignment="Center"
+                    ValueChanged="Slider_Zoom_ValueChanged"/>
+
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="MenuItem_ZoomIn_Click">
+                <Image Source="Images/ZoomIn_16x.png"/>
+            </Button>
+        </StackPanel>
+
+
+        <Grid Grid.Row="1" Margin="0,30,-0.4,-0.4" Grid.RowSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <ScrollViewer Grid.Column="0" Name="scrollViewer" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Auto" Foreground="{x:Null}">
+                <ScrollViewer.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0.0">
+                        <GradientStop Color="#FF8CECFF"/>
+                        <GradientStop Color="Black" Offset="0.1"/>
+                        <GradientStop Color="#FF8CECFF" Offset="1"/>
+                        <GradientStop Color="Black" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </ScrollViewer.Background>
+
+                <Canvas x:Name="MainCanvas2" Height="640" Width="640" Background="Black"  
+                    Initialized="MainCanvas2_Initialized" MouseWheel="MainCanvas2_MouseWheel">
+                    <Canvas.RenderTransform>
+                        <MatrixTransform x:Name="matrixTransform" />
+                    </Canvas.RenderTransform>
+                </Canvas>
+            </ScrollViewer>
+
+            <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Center"
+                          VerticalAlignment="Stretch">
+                <GridSplitter.Background>
+                    <LinearGradientBrush EndPoint="0,0.0" StartPoint="0,1.0">
+                        <GradientStop Color="#FF8CECFF" Offset="0.9"/>
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF8CECFF" Offset="0.1"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                    </LinearGradientBrush>
+                </GridSplitter.Background>
+            </GridSplitter>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8CECFF" Offset="1"/>
+                        <GradientStop Color="Black" Offset="0.1"/>
+                        <GradientStop Color="#FF8CECFF" Offset="0.0"/>
+                        <GradientStop Color="Black" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Label Grid.Row="0" Content="カラーパレット" Margin="10"/>
+                <Rectangle Grid.Row="1" x:Name="ColorPalette" Height="30"
+                           Margin="10,0,10,10" Fill="Black" Stroke="White" 
+                           MouseDown="ColorPalette_MouseDown"/>
+            </Grid>
+        </Grid>
+
+        <GridSplitter Grid.Row="3" HorizontalAlignment="Left" 
+                      Background="White"/>
+
+        <StatusBar Grid.Row="3" HorizontalAlignment="Left"
+                   Foreground="White">
+            <StatusBar.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8CECFF" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.1"/>
+                </LinearGradientBrush>
+            </StatusBar.Background>
+
+            
+            <Label  Content="           "/>
+            <Separator />
+            <Label Name="StatusBarLabel" Content="aaa"/>
+            <Separator />
+            <Label Name="StatusBarLabel_Scale" Content="拡大率：100%"/>
+            <Separator />
+
+
+        </StatusBar>
+    </Grid>
+</Window>

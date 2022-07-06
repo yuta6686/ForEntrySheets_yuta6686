@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "oePZCmVWAtDktwgSZZ4KzBS6ezIdQBPwYAVxMP+PjrIVtCaid0bYiymj7LwZSThHCKg6yLb0tRATzSB/E9+fDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yuta2\\Desktop\\作品\\IconEditor\\IconEditor\\IconEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuta2\\.nuget\\packages\\commonwin32\\2.1.0.3\\commonwin32.2.1.0.3.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.22000.196\\microsoft.windows.sdk.contracts.10.0.22000.196.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\modernwpf.messagebox\\0.5.1\\modernwpf.messagebox.0.5.1.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\modernwpfui\\0.9.4\\modernwpfui.0.9.4.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.7.0\\system.runtime.windowsruntime.ui.xaml.4.7.0.nupkg.sha512",
+    "C:\\Users\\yuta2\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
