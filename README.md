@@ -105,6 +105,14 @@ graph TB
 
 
 ## Blender作品
+
+### 詳細情報
+- 独学
+- 2020年6月からYoutubeのチュートリアルを見ながら始める。
+- 武器・エフェクトなどを制作
+- Geometry Node でモデリング勉強中
+- Shader Node でシェーダを研究中
+
 ### 武器など
 ![手榴弾サイクレス](https://user-images.githubusercontent.com/68798323/177544915-9cafd69d-2691-48a2-83ae-13bb75ce6f83.png)
 ![カーボンローラー](https://user-images.githubusercontent.com/68798323/177544702-310e7755-32e1-479c-a5b8-17679e9a1cde.png)
