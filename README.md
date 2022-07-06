@@ -29,13 +29,8 @@ graph TB
 	
 ```
 ---
-## 日本ゲーム大賞作品：スクリーンショット
-![claer](https://user-images.githubusercontent.com/68798323/177542177-e7ffee3b-1614-4ce7-b85f-db5b44ce443a.png)
-![SS_1-1](https://user-images.githubusercontent.com/68798323/177542190-a0f2755a-69ad-4e68-8604-13b67f972f90.png)
-![SS_4-1](https://user-images.githubusercontent.com/68798323/177542197-08f4eaa5-7286-4dce-a568-2fe76088d4e7.png)
-![SS_5-1](https://user-images.githubusercontent.com/68798323/177542203-74edcd96-3465-4ab3-9842-c577a97e8475.png)
-![SS_5-1](https://user-images.githubusercontent.com/68798323/177542216-a175e785-ab55-46a1-95ce-0c211104c7ab.png)
-![title](https://user-images.githubusercontent.com/68798323/177542229-f74b3d35-9d2f-45d8-b05f-bed3a71a1a84.png)
+## 日本ゲーム大賞作品
+---
 
 ### 詳細情報
 #### 期間
@@ -43,6 +38,15 @@ graph TB
 #### チーム制作
 - 人数：10人（プログラマ6名,プランナー1名,デザイナー3名)
 #### どんなゲーム？
+---
+### スクリーンショット
+![claer](https://user-images.githubusercontent.com/68798323/177542177-e7ffee3b-1614-4ce7-b85f-db5b44ce443a.png)
+![SS_1-1](https://user-images.githubusercontent.com/68798323/177542190-a0f2755a-69ad-4e68-8604-13b67f972f90.png)
+![SS_4-1](https://user-images.githubusercontent.com/68798323/177542197-08f4eaa5-7286-4dce-a568-2fe76088d4e7.png)
+![SS_5-1](https://user-images.githubusercontent.com/68798323/177542203-74edcd96-3465-4ab3-9842-c577a97e8475.png)
+![SS_5-1](https://user-images.githubusercontent.com/68798323/177542216-a175e785-ab55-46a1-95ce-0c211104c7ab.png)
+![title](https://user-images.githubusercontent.com/68798323/177542229-f74b3d35-9d2f-45d8-b05f-bed3a71a1a84.png)
+
 
 ---
 ## Hal Event Week（学内コンテスト) ：スクリーンショット
@@ -86,14 +90,17 @@ graph TB
 
 ---
 ## WPF
-![image_001](https://user-images.githubusercontent.com/68798323/177545085-1a51f379-7072-4ba2-bc11-1bac1f49a9a9.png)
-![image_002](https://user-images.githubusercontent.com/68798323/177545094-dd821edb-2f53-475b-964c-051a904c9a64.png)
-![image_003](https://user-images.githubusercontent.com/68798323/177545103-b0e8fa41-8e88-4565-84c1-447eda56cc5e.png)
-
+---
 ### このアイコンエディタでできること
 - 32ビットのビットマップ画像を開く
 - 保存する
 - 拡大・縮小
 - Redo・Undo
 - カラーパレットで色変更
+---
+![image_001](https://user-images.githubusercontent.com/68798323/177545085-1a51f379-7072-4ba2-bc11-1bac1f49a9a9.png)
+![image_002](https://user-images.githubusercontent.com/68798323/177545094-dd821edb-2f53-475b-964c-051a904c9a64.png)
+![image_003](https://user-images.githubusercontent.com/68798323/177545103-b0e8fa41-8e88-4565-84c1-447eda56cc5e.png)
+
+
 
