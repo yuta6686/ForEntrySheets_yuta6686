@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Dust01
+  m_Shader: {fileID: -6465566751694194690, guid: 81b0965229ea617498b9a0d5daa5ce71,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 34e1648d429373948b7cd6ec81a166ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_5A0CAA5B: 1
+    - Vector1_BAD60B37: 1
+    - Vector1_C4D88EA6: 150
+    - Vector1_CF662B98: 10
+    - Vector1_D5C0AB87: 0.5
+    m_Colors:
+    - Vector2_88ECBA57: {r: 0.2, g: -0.1, b: 0, a: 0}

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_BlockEffect_CastleHard
+  m_Shader: {fileID: -6465566751694194690, guid: 10cbfef6fbbfed84d83d47076cc74a5c,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_8870F86E:
+        m_Texture: {fileID: 2800000, guid: f2c8a551b56875d43bb824cccd262216, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_787C0D5B: 1
+    - Boolean_E5881C7B: 1
+    - RotateSpeed: 2
+    - Vector1_22962D5F: 0.05
+    - Vector1_5C677FEE: 0.1
+    - Vector1_88F0B0B7: 1
+    - Vector1_DEEEFE8B: 0
+    - Vector1_F8AB79F: 1
+    - _BlinkSpeed: 6.73
+    - _Emission: 1
+    - _IsBlackTexture: 0
+    - _IsBlinking: 0
+    - _IsEmission: 1
+    - _IsVertexColor: 0
+    m_Colors:
+    - Color_9D134BFB: {r: 0.16657615, g: 1, b: 0, a: 0}
+    - Color_C64FAFDC: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 0.92364, g: 2.0611756, b: 1.8552424, a: 1}

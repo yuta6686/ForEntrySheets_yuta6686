@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_UG_ClearImage
+  m_Shader: {fileID: -6465566751694194690, guid: 11aef90da1a61df4eaf38c8247a4acd3,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ee647b3e6b20c7b48a7345778efb74a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_E5881C7B: 0
+    - Vector1_B264D0A: 0.1
+    - Vector1_CC02996B: 1
+    - _BlinkSpeed: 1
+    - _EgdeThickness: 0.05
+    - _Emission: 1
+    - _IsBlackTexture: 0
+    - _IsBlinking: 0
+    - _IsEgde: 0
+    - _IsEmission: 0
+    - _IsVertexColor: 0
+    m_Colors:
+    - Color_E160EED9: {r: 1, g: 0.9655911, b: 0, a: 0}
+    - Color_FCABA32: {r: 1, g: 0.9655911, b: 0, a: 0}
+    - _MainColor: {r: 2.2167342, g: 2.2167342, b: 2.2167342, a: 1}

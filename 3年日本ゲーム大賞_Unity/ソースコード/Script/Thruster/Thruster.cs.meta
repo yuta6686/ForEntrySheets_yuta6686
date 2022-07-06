@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 3e033403d9e2ba84585e522141c43d96
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - thrusterEffect: {fileID: 1398846324898158025, guid: 0de92330cba27b74bbd9fafe4935784f,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

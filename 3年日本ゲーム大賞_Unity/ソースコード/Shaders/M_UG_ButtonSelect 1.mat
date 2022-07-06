@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_UG_ButtonSelect 1
+  m_Shader: {fileID: -6465566751694194690, guid: e656fd13a6938af4887fec78461bc571,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 7b13ded6e2c9d124ca3d43653127ffcb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_E5881C7B: 0
+    - IsGradientColor: 0
+    - Vector1_5C4359F2: 0.7
+    - Vector1_DEEEFE8B: 1
+    - _BlinkDelay: 1
+    - _BlinkMinAlphaValue: 0.5
+    - _BlinkSpeed: 6.39
+    - _Emission: 1
+    - _IsBlackTexture: 0
+    - _IsBlinking: 0
+    - _IsEmission: 1
+    - _IsNoise: 1
+    - _IsVertexColor: 0
+    - _NoisePower: 0.72
+    - _NoiseScale: 10.26
+    - _NoiseSpeed: 0.1
+    m_Colors:
+    - _MainColor: {r: 0.9555911, g: 0.8472908, b: 0.095559105, a: 1}
+    - _NoiseColor: {r: 1, g: 1, b: 1, a: 0}
