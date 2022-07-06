@@ -1,0 +1,189 @@
+//=============================================================================
+//
+// ダイヤモンド型のエネミー [Enemy_Diamond.cpp]
+// Author : Yanagisawa Yuta
+//
+// 説明：プレイヤーを追いかけるように動きます
+//=============================================================================
+#include "Enemy_Diamond.h"
+#include "Enemy_Square.h"
+#include "CoordinateTransformation.h"
+
+void Enemy_Diamond::Init()
+{
+	LoadModel((char*)"data/MODEL/enemy.obj", &m_Model);
+
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+
+		m_ObjInfo[i].hp = 1 + rand() % 3;
+		m_ObjInfo[i].hp_max = m_ObjInfo[i].hp;
+		m_ObjInfo[i].pos = D3DXVECTOR3(Enemyfrand() * ENEMY_POS_MAX, Enemyfrand() * ENEMY_POS_MAX, Enemyfrand() * ENEMY_POS_MAX);
+		m_ObjInfo[i].offset = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+		m_ObjInfo[i].rot = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+		m_ObjInfo[i].vec = D3DXVECTOR3(Enemyfrand(), Enemyfrand(), Enemyfrand());
+
+		FLOAT scale = (0.5f + (m_ObjInfo[i].hp_max / A_STAGE_NUM_MAX)) * 5.0f;
+		m_ObjInfo[i].scl = D3DXVECTOR3(scale, scale, scale);
+
+		m_ObjInfo[i].size = D3DXVECTOR3(ENEMY_SQUARE_X * scale, ENEMY_SQUARE_Y * scale, ENEMY_SQUARE_Z * scale);
+		m_ObjInfo[i].idxShadow = 0;
+		m_ObjInfo[i].use = false;
+		m_ObjInfo[i].free = false;
+		m_ObjInfo[i].counter = 0;
+		m_ObjInfo[i].IsDeath = false;
+
+		//	Emissionとして使用
+		m_ObjInfo[i].col = D3DXCOLOR(0.0f, 0.0f, 0.0f, 0.0f);
+	}
+
+	for (int i = 0; i < GetNumOfEnemiesThatAppear(); i++) {
+		SetEnemy();
+	}
+
+
+
+	m_Emission = 1.0f;
+}
+
+void Enemy_Diamond::Uninit()
+{
+	UnloadModel(&m_Model);
+}
+
+void Enemy_Diamond::Update()
+{//	開始からTIME_COUNTER_MAX秒はコリジョンなし
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+
+		if (m_ObjInfo[i].use == false)continue;
+		if (m_ObjInfo[i].free == false)continue;
+
+
+
+
+		if (m_ObjInfo[i].counter >= GetTimeCounterMax()) {
+			m_ObjInfo[i].counter = GetTimeCounterMax();
+			m_ObjInfo[i].free = false;
+		}
+		else {
+			m_ObjInfo[i].counter++;
+
+			m_ObjInfo[i].col.a += 1.0f / GetTimeCounterMax();
+		}
+
+
+
+	}
+
+
+
+	//	モデルのアルファいじってます
+
+	for (int i = 0; i < GetEnemyNumMax(); i++)
+	{
+		if (m_ObjInfo[i].use == false)continue;
+
+		if (i == 26) {
+			int a = 0;
+		}
+
+		if (m_ObjInfo[i].free) {
+			m_ObjInfo[i].col.b = m_Emission;
+		}
+		else {
+			m_ObjInfo[i].col.r = m_Emission;
+		}
+	}
+}
+
+void Enemy_Diamond::Draw()
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use) {
+
+			for (unsigned short i = 0; i < m_Model.SubsetNum; i++)
+			{
+				m_Model.SubsetArray[i].Material.Material.Diffuse.a = m_ObjInfo[i].col.a;
+				m_Model.SubsetArray[i].Material.Material.Emission =
+					D3DXCOLOR(m_ObjInfo[i].col.r, m_ObjInfo[i].col.g, m_ObjInfo[i].col.b, 0.0f);
+			}
+
+			CoordinateTransformation(&m_ObjInfo[i]);
+
+			DrawModel(&m_Model);
+		}
+	}
+}
+
+void Enemy_Diamond::Action()
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use) {
+			m_ObjInfo[i].pos += m_ObjInfo[i].vec;
+		}
+	}
+}
+
+bool Enemy_Diamond::Death()
+{
+    return false;
+}
+
+void Enemy_Diamond::SetEnemy()
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use)continue;
+		m_ObjInfo[i].use = true;
+		m_ObjInfo[i].free = true;
+		m_ObjInfo[i].IsDeath = false;
+		m_ObjInfo[i].counter = 0;
+		m_ObjInfo[i].col = D3DXCOLOR(0.0f, 0.0f, 0.0f, 0.0f);
+		m_ObjInfo[i].hp = m_ObjInfo[i].hp_max;
+		break;
+	}
+}
+
+void Enemy_Diamond::SetEnemy(D3DXVECTOR3 pos)
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use)continue;
+		m_ObjInfo[i].use = true;
+		m_ObjInfo[i].free = true;
+		m_ObjInfo[i].IsDeath = false;
+		m_ObjInfo[i].counter = 0;
+		m_ObjInfo[i].col = D3DXCOLOR(0.0f, 0.0f, 0.0f, 0.0f);
+		m_ObjInfo[i].hp = m_ObjInfo[i].hp_max;
+		break;
+	}
+}
+
+void Enemy_Diamond::SetEnemy(D3DXVECTOR3 pos, D3DXVECTOR3 size)
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use)continue;
+		m_ObjInfo[i].use = true;
+		m_ObjInfo[i].free = true;
+		m_ObjInfo[i].IsDeath = false;
+		m_ObjInfo[i].counter = 0;
+		m_ObjInfo[i].pos = pos;
+		m_ObjInfo[i].size = size;
+		m_ObjInfo[i].hp = m_ObjInfo[i].hp_max;
+		break;
+	}
+}
+
+void Enemy_Diamond::SetEnemy(D3DXVECTOR3 pos, D3DXVECTOR3 size, D3DXVECTOR3 vec)
+{
+	for (int i = 0; i < GetEnemyNumMax(); i++) {
+		if (m_ObjInfo[i].use)continue;
+		m_ObjInfo[i].use = true;
+		m_ObjInfo[i].free = true;
+		m_ObjInfo[i].IsDeath = false;
+		m_ObjInfo[i].counter = 0;
+		m_ObjInfo[i].pos = pos;
+		m_ObjInfo[i].size = size;
+		m_ObjInfo[i].vec = vec;
+		m_ObjInfo[i].hp = m_ObjInfo[i].hp_max;
+		break;
+	}
+}
+
