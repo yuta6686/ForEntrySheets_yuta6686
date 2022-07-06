@@ -15,9 +15,7 @@ graph TB
 	all --> dx2	
 	all --> bld
 	all --> wpf
-
-	
-	
+		
 	ngt --> ngt_sum1[Unity 2Dゲーム] --> 
 	ntg_sum1[チーム制作<br>]-->ntg_sum2.5[<b>担当箇所</b>]-->
 	ngt_sum2[タイトル<br>リザルト<br>シーン選択<br>エリア選択<br>フェード<br>シェーダ<br>アニメーション<br>など]
@@ -38,6 +36,13 @@ graph TB
 ![SS_5-1](https://user-images.githubusercontent.com/68798323/177542203-74edcd96-3465-4ab3-9842-c577a97e8475.png)
 ![SS_5-1](https://user-images.githubusercontent.com/68798323/177542216-a175e785-ab55-46a1-95ce-0c211104c7ab.png)
 ![title](https://user-images.githubusercontent.com/68798323/177542229-f74b3d35-9d2f-45d8-b05f-bed3a71a1a84.png)
+
+### 詳細情報
+#### 期間
+- 2022年3月1日～5月31日
+#### チーム制作
+- 人数：10人（プログラマ6名,プランナー1名,デザイナー3名)
+#### どんなゲーム？
 
 ---
 ## Hal Event Week（学内コンテスト) ：スクリーンショット
