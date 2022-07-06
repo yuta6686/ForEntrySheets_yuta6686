@@ -74,7 +74,6 @@ graph TB
 ![SS_1-1](https://user-images.githubusercontent.com/68798323/177542190-a0f2755a-69ad-4e68-8604-13b67f972f90.png)
 ![SS_4-1](https://user-images.githubusercontent.com/68798323/177542197-08f4eaa5-7286-4dce-a568-2fe76088d4e7.png)
 ![SS_5-1](https://user-images.githubusercontent.com/68798323/177542203-74edcd96-3465-4ab3-9842-c577a97e8475.png)
-![SS_5-1](https://user-images.githubusercontent.com/68798323/177542216-a175e785-ab55-46a1-95ce-0c211104c7ab.png)
 ![title](https://user-images.githubusercontent.com/68798323/177542229-f74b3d35-9d2f-45d8-b05f-bed3a71a1a84.png)
 -------------------------------------------------------------------------------------------------------------------------------
 
