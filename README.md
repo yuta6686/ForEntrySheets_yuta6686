@@ -79,6 +79,26 @@ graph TB
 
 
 ## Hal Event Week（学内コンテスト) ：スクリーンショット
+
+### タイトル「***HopSlime***」
+
+### 詳細情報
+
+#### 期間
+ - 2021年10月8日 ~ 2022年1月31日
+ 
+ #### チーム制作
+ - 人数：7人(プログラマ4人,プランナー1人,デザイナー2人)
+ 
+ #### どんなゲーム？
+
+#### 担当箇所
+- ゲームシーン
+	- プレイヤーの挙動
+	- 
+- エフェクト
+
+
 ![screen_shoot_001](https://user-images.githubusercontent.com/68798323/177543117-ad4a55b2-793c-484e-8f8a-6bac24472ac7.jpg)
 ![screen_shoot_002](https://user-images.githubusercontent.com/68798323/177543133-4812d084-0b94-4296-9dfe-04d070d99c8b.jpg)
 ![screen_shoot_003](https://user-images.githubusercontent.com/68798323/177543147-c84711f1-108f-402a-9ece-01188f6bd6f5.jpg)
