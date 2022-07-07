@@ -95,9 +95,17 @@ graph TB
 #### 担当箇所
 - ゲームシーン
 	- プレイヤーの挙動
-	- 
+	- 糸の挙動		
 - エフェクト
+	- アイテム
+	- 時間遅延演出
 
+#### こだわった点
+- ジャンプ中のエフェクト
+	- 最後まで飛ぶと風エフェクトがでる。
+- ワイヤーアクション
+	- 振り子みたいな動きと、直線的な動きを使い分けられるように工夫しました。
+	- (反省)ワイヤーを曲線で表現する。
 
 ![screen_shoot_001](https://user-images.githubusercontent.com/68798323/177543117-ad4a55b2-793c-484e-8f8a-6bac24472ac7.jpg)
 ![screen_shoot_002](https://user-images.githubusercontent.com/68798323/177543133-4812d084-0b94-4296-9dfe-04d070d99c8b.jpg)
@@ -110,6 +118,8 @@ graph TB
 
 
 ## 2年DirectX 学内コンテスト：スクリーンショット
+
+
 ![スクリーンショット_001](https://user-images.githubusercontent.com/68798323/177544072-c918fffc-e10d-43c9-8d7c-5d0794bc9d41.jpg)
 
 ![image](https://user-images.githubusercontent.com/68798323/177544009-edefedbf-79ee-43d2-ad59-cdc3c7d6d496.png)
