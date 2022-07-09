@@ -135,6 +135,9 @@ graph TB
  #### 個人制作
  
  #### どんなゲーム？
+ ![Tutorial_003](https://user-images.githubusercontent.com/68798323/178104787-6723f24e-3df6-4b5a-a5b0-7b0942ec0e77.png)
+![Tutorial_004](https://user-images.githubusercontent.com/68798323/178104789-c6b8db1e-e43e-43bc-9deb-2a8f08e6750e.png)
+![Tutorial_005](https://user-images.githubusercontent.com/68798323/178104792-50608932-9cb2-46c3-8962-68f0d216f2b3.png)
 
 #### こだわった点
 - ジャンプ中のエフェクト
